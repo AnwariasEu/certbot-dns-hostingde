@@ -3,7 +3,7 @@ import os
 from setuptools import find_packages
 from setuptools import setup
 
-version = '2.0.1'
+version = '0.0.2'
 
 # This package relies on PyOpenSSL, requests, and six, however, it isn't
 # specified here to avoid masking the more specific request requirements in
@@ -13,7 +13,7 @@ install_requires = [
     'setuptools',
     'requests',
     'requests-mock',
-    'dns-lexicon>=3.11.6',
+    'dns-lexicon>=3.21.1',
     'parsedatetime<=2.5;python_version<"3.0"'
 ]
 
@@ -22,12 +22,12 @@ with open(os.path.join(BASE_PATH, "README.md")) as f:
     long_description = f.read()
 
 setup(
-    name='certbot-dns-hosting',
+    name='certbot-dns-hostingde',
     version=version,
     description="Hosting.de DNS Authenticator plugin for Certbot",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/anwariaseu/certbot-dns-hosting',
+    url='https://github.com/anwariaseu/certbot-dns-hostingde',
     author="anwariaseu",
     author_email='mail@anwarias.eu',
     license='Apache License 2.0',
@@ -58,8 +58,8 @@ setup(
     install_requires=install_requires,
     entry_points={
         'certbot.plugins': [
-            'dns-hostingde = certbot_dns_hosting.dns_hosting:Authenticator',
+            'dns-hostingde = certbot_dns_hostingde.dns_hostingde:Authenticator',
         ],
     },
-    test_suite="certbot_dns_hosting",
+    # test_suite="certbot_dns_hostingde",
 )
